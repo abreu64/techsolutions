@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning - TechSolutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: 80px 20px;
+        }
+        
+        .content-section.gray {
+            background-color: var(--light-color);
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .features-list i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+        
+        .ml-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+        
+        .ml-service-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .ml-service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .ml-service-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .ml-service-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .ml-service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-text h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                TechSolutions
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#services">Serviços</a></li>
+                <li><a href="index.html#portfolio">Portfólio</a></li>
+                <li><a href="index.html#about">Sobre Nós</a></li>
+                <li><a href="https://wa.me/5532988272527" target="_blank" class="btn-nav whatsapp-btn"><i class="fab fa-whatsapp"></i> Fale Conosco</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1><i class="fas fa-brain"></i> Machine Learning & Inteligência Artificial</h1>
+        <p>Desenvolvemos modelos de Machine Learning e soluções de IA que automatizam processos, preveem tendências e geram insights valiosos para o seu negócio.</p>
+    </section>
+
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="content-text">
+                <h2>Inteligência Artificial para o Futuro</h2>
+                <p>Nossa equipe especializada em Machine Learning e Inteligência Artificial desenvolve soluções customizadas que transformam dados em ações inteligentes. Utilizamos algoritmos avançados de aprendizado de máquina para resolver problemas complexos e criar vantagens competitivas para o seu negócio.</p>
+                <p>Desde modelos preditivos até sistemas de recomendação, chatbots inteligentes e visão computacional, implementamos soluções de IA que se adaptam e melhoram continuamente com o tempo. Trabalhamos com as principais frameworks e bibliotecas do mercado, garantindo soluções robustas e escaláveis.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Modelos Preditivos e Forecasting</li>
+                    <li><i class="fas fa-check-circle"></i> Sistemas de Recomendação</li>
+                    <li><i class="fas fa-check-circle"></i> Processamento de Linguagem Natural (NLP)</li>
+                    <li><i class="fas fa-check-circle"></i> Visão Computacional</li>
+                    <li><i class="fas fa-check-circle"></i> Detecção de Anomalias</li>
+                    <li><i class="fas fa-check-circle"></i> Automação Inteligente</li>
+                </ul>
+            </div>
+            <div class="content-image">
+                <img src="images/ml-models.webp" alt="Modelos de Machine Learning">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section gray">
+        <div class="content-grid">
+            <div class="content-image">
+                <img src="images/ml-algorithms.png" alt="Algoritmos de Machine Learning">
+            </div>
+            <div class="content-text">
+                <h2>Algoritmos e Técnicas Avançadas</h2>
+                <p>Utilizamos uma ampla gama de algoritmos de Machine Learning, desde métodos clássicos até técnicas de Deep Learning mais avançadas. Nossa expertise inclui redes neurais, árvores de decisão, algoritmos de clustering, regressão, classificação e muito mais.</p>
+                <p>Trabalhamos com TensorFlow, PyTorch, Scikit-learn, Keras e outras bibliotecas líderes de mercado. Cada projeto é cuidadosamente analisado para escolher os algoritmos mais adequados, garantindo precisão, eficiência e resultados mensuráveis.</p>
+                <p>Nossos modelos são treinados com dados de qualidade, validados rigorosamente e otimizados para performance em produção. Fornecemos documentação completa e suporte contínuo para garantir que sua solução de IA continue evoluindo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços de Machine Learning</h2>
+                <p>Soluções completas de IA para transformar seu negócio.</p>
+            </div>
+            
+            <div class="ml-services-grid">
+                <div class="ml-service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Análise Preditiva</h3>
+                    <p>Desenvolvemos modelos que preveem comportamentos futuros, demanda de produtos, churn de clientes e outras métricas críticas para o seu negócio.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chatbots Inteligentes</h3>
+                    <p>Criamos assistentes virtuais com processamento de linguagem natural que entendem contexto e fornecem respostas precisas aos seus clientes.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visão Computacional</h3>
+                    <p>Implementamos sistemas de reconhecimento de imagens, detecção de objetos, análise facial e outras aplicações de computer vision.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Sistemas de Recomendação</h3>
+                    <p>Desenvolvemos engines de recomendação personalizadas que aumentam o engajamento e as vendas através de sugestões inteligentes.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Detecção de Fraudes</h3>
+                    <p>Criamos modelos que identificam padrões anormais e detectam fraudes em tempo real, protegendo seu negócio e seus clientes.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <p>Implementamos soluções de NLP para análise de sentimentos, extração de informações, tradução automática e classificação de textos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section gray">
+        <div class="content-grid">
+            <div class="content-text">
+                <h2>Deep Learning e Redes Neurais</h2>
+                <p>Especializamo-nos em Deep Learning, utilizando redes neurais profundas para resolver problemas complexos que exigem alta capacidade de aprendizado. Nossas soluções incluem redes neurais convolucionais (CNN) para visão computacional, redes recorrentes (RNN e LSTM) para séries temporais e processamento de linguagem, e redes adversárias generativas (GAN) para geração de conteúdo.</p>
+                <p>Implementamos arquiteturas avançadas como Transformers, BERT, GPT e outras técnicas de estado da arte. Nossa equipe está constantemente atualizada com as últimas pesquisas e inovações em IA, garantindo que você tenha acesso às soluções mais modernas e eficazes.</p>
+            </div>
+            <div class="content-image">
+                <img src="images/ml-deep-learning.png" alt="Deep Learning e Redes Neurais">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aplicações de Machine Learning</h2>
+                <p>Casos de uso reais de IA em diversos setores.</p>
+            </div>
+            
+            <div class="ml-services-grid">
+                <div class="ml-service-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>E-commerce</h3>
+                    <p>Recomendação de produtos, previsão de demanda, otimização de preços e personalização da experiência de compra.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Saúde</h3>
+                    <p>Diagnóstico assistido por IA, análise de imagens médicas, previsão de doenças e otimização de tratamentos.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Finanças</h3>
+                    <p>Análise de crédito, detecção de fraudes, trading algorítmico e previsão de mercado.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Indústria</h3>
+                    <p>Manutenção preditiva, controle de qualidade, otimização de processos e automação inteligente.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Marketing</h3>
+                    <p>Segmentação de clientes, análise de sentimentos, previsão de churn e otimização de campanhas.</p>
+                </div>
+                
+                <div class="ml-service-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Logística</h3>
+                    <p>Otimização de rotas, previsão de demanda, gestão de estoque e automação de armazéns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Implementar IA no Seu Negócio?</h2>
+            <p>Entre em contato conosco e descubra como Machine Learning pode revolucionar sua empresa.</p>
+            <a href="https://wa.me/5532988272527" target="_blank" class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>TechSolutions</span>
+                    </div>
+                    <p>Transformando ideias em soluções tecnológicas inovadoras desde 2020.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="desenvolvimento-web.html">Criação de Sites</a></li>
+                        <li><a href="analise-dados.html">Análise de Dados</a></li>
+                        <li><a href="desenvolvimento-mobile.html">Criação de Aplicativos</a></li>
+                        <li><a href="machine-learning.html">Machine Learning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="index.html#about">Sobre Nós</a></li>
+                        <li><a href="index.html#portfolio">Portfólio</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <p>Telefone: (16) 99651-0930</p>
+                    <p>WhatsApp: (32) 98827-2527</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechSolutions. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
