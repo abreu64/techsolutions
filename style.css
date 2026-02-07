@@ -71,6 +71,17 @@ nav {
     cursor: pointer;
 }
 
+.logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: var(--white);
+    padding: 2px;
+    border: 2px solid var(--accent-color);
+    box-shadow: var(--shadow-sm);
+}
+
 .logo i {
     font-size: 1.8rem;
     color: var(--accent-color);
@@ -262,8 +273,15 @@ nav {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Seções Gerais */
@@ -1060,17 +1078,18 @@ footer {
 
 
 .contact-info-item .fa-whatsapp {
-    color: #25D366; /* Cor verde do WhatsApp */
+    color: #25D366;
+    /* Cor verde do WhatsApp */
 }
 
 
 
 .whatsapp-btn {
-    background-color: #25D366 !important; /* Cor verde do WhatsApp */
+    background-color: #25D366 !important;
+    /* Cor verde do WhatsApp */
     color: var(--white) !important;
 }
 
 .whatsapp-btn:hover {
     background-color: #1DA851 !important;
 }
-

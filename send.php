@@ -1,35 +1,30 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mail = new PHPMailer(true);
+    // Sanitização de dados
+    $name    = htmlspecialchars($_POST["name"]);
+    $email   = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    $phone   = htmlspecialchars($_POST["phone"]);
+    $service = htmlspecialchars($_POST["service"]);
+    $message = htmlspecialchars($_POST["message"]);
 
-    try {
-        // Configurações do Servidor (Exemplo usando Gmail)
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com'; // Ou o host do seu provedor
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'SEU_EMAIL@gmail.com'; // Seu e-mail
-        $mail->Password   = 'SUA_SENHA_DE_APP';    // Sua senha de app
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+    $to = "valdesdeabreu@hotmail.com";
+    $subject = "Novo contato do site: $name";
 
-        // Destinatários
-        $mail->setFrom('SEU_EMAIL@gmail.com', 'Site TechSolutions');
-        $mail->addAddress('valdesdeabreu@hotmail.com'); 
+    $body = "Novo contato recebido pelo site:\n\n";
+    $body .= "Nome: $name\n";
+    $body .= "E-mail: $email\n";
+    $body .= "Telefone: $phone\n";
+    $body .= "Serviço: $service\n\n";
+    $body .= "Mensagem:\n$message";
 
-        // Conteúdo
-        $mail->isHTML(false);
-        $mail->Subject = "Novo Contato: " . $_POST['service'];
-        $mail->Body    = "Nome: {$_POST['name']}\nE-mail: {$_POST['email']}\nTelefone: {$_POST['phone']}\n\nMensagem:\n{$_POST['message']}";
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-        $mail->send();
-        echo "sucesso";
-    } catch (Exception $e) {
-        echo "erro";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "success";
+    } else {
+        echo "error";
     }
 }
 ?>
