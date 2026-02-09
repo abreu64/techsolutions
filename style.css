@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
+/* Font import moved to HTML */
 
 :root {
     --primary-color: #001a33;
@@ -280,8 +280,10 @@ nav {
 
 /* Reveal Animations */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    /* Changed from 0 for debugging */
+    transform: translateY(0);
+    /* Changed from 30px for debugging */
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
