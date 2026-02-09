@@ -4,150 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenvolvimento Web - TechSolutions</title>
+    <title>WEB DEV - TECHSOLUTIONS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-header {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 120px 20px 80px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        .content-section {
-            padding: 80px 20px;
-        }
-
-        .content-section.gray {
-            background-color: var(--light-color);
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-text h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .content-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .content-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .features-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-
-        .features-list li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .features-list i {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        .technologies {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 3rem auto 0;
-        }
-
-        .tech-item {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .tech-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .tech-item i {
-            font-size: 3rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tech-item h4 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
-
-        .cta-section {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            .content-text h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -162,8 +21,8 @@
                 <li><a href="index.html#services">Serviços</a></li>
                 <li><a href="index.html#portfolio">Portfólio</a></li>
                 <li><a href="sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="https://wa.me/5532988272527" target="_blank" class="btn-nav whatsapp-btn"><i
-                            class="fab fa-whatsapp"></i> Fale Conosco</a></li>
+                <li><a href="index.html#contact" class="btn-nav"><i class="fas fa-paper-plane"></i> Fale Conosco</a>
+                </li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -173,150 +32,90 @@
         </nav>
     </header>
 
-    <section class="page-header">
-        <h1><i class="fas fa-laptop-code"></i> Desenvolvimento Web</h1>
-        <p>Criamos sites modernos, responsivos e otimizados que transformam visitantes em clientes e impulsionam o
-            crescimento do seu negócio.</p>
-    </section>
+    <section class="hero reveal">
+        <div class="hero-content">
 
-    <section class="content-section">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2>Soluções Web Sob Medida</h2>
-                <p>Desenvolvemos sites e plataformas web personalizadas que atendem às necessidades específicas do seu
-                    negócio. Nossa equipe de especialistas utiliza as tecnologias mais modernas para criar experiências
-                    digitais excepcionais.</p>
-                <p>Desde landing pages impactantes até plataformas e-commerce completas, garantimos que seu site seja
-                    rápido, seguro e otimizado para conversão. Cada projeto é desenvolvido com foco na experiência do
-                    usuário e nos objetivos de negócio do cliente.</p>
-                <ul class="features-list">
-                    <li><i class="fas fa-check-circle"></i> Design Responsivo e Mobile-First</li>
-                    <li><i class="fas fa-check-circle"></i> Otimização para Motores de Busca (SEO)</li>
-                    <li><i class="fas fa-check-circle"></i> Performance e Velocidade Otimizadas</li>
-                    <li><i class="fas fa-check-circle"></i> Integração com APIs e Sistemas</li>
-                    <li><i class="fas fa-check-circle"></i> Segurança e Proteção de Dados</li>
-                </ul>
-            </div>
-            <div class="content-image">
-                <img src="images/ecommerce-site.png" alt="Exemplo de E-commerce Desenvolvido">
-            </div>
+            <h1>DOMINAÇÃO DIGITAL</h1>
+            <p>Construímos plataformas que não apenas funcionam, mas comandam a atenção do mercado.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/web-development.jpg" alt="Web Systems"
+                style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow-lg);">
         </div>
     </section>
 
-    <section class="content-section gray">
-        <div class="content-grid">
-            <div class="content-image">
-                <img src="images/web-development.jpg" alt="Desenvolvimento Web">
-            </div>
-            <div class="content-text">
-                <h2>Tecnologias Modernas</h2>
-                <p>Utilizamos as tecnologias mais avançadas e frameworks modernos para garantir que seu site seja
-                    escalável, seguro e fácil de manter. Nossa stack tecnológica é cuidadosamente selecionada para cada
-                    projeto.</p>
-                <p>Trabalhamos com HTML5, CSS3, JavaScript, React, Vue.js, Node.js, PHP, WordPress e muito mais.
-                    Escolhemos a melhor combinação de tecnologias para atender aos requisitos específicos do seu
-                    projeto.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
+    <section class="services-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Tipos de Sites que Desenvolvemos</h2>
-                <p>Oferecemos soluções completas para diversos tipos de projetos web.</p>
-            </div>
+            <div class="services-grid">
+                <div class="service-card reveal reveal-left">
+                    <div class="service-icon"><i class="fas fa-store"></i></div>
+                    <h3>E-commerce Brutal</h3>
+                    <p>Lojas que vendem. Sem atrito. Sem distrações. Apenas performance pura.</p>
+                </div>
 
-            <div class="technologies">
-                <div class="tech-item">
-                    <i class="fas fa-store"></i>
-                    <h4>E-commerce</h4>
-                    <p>Lojas virtuais completas com carrinho, pagamento e gestão</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Landing Pages</h4>
-                    <p>Páginas otimizadas para conversão e captação de leads</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-building"></i>
-                    <h4>Sites Institucionais</h4>
-                    <p>Presença digital profissional para sua empresa</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-blog"></i>
-                    <h4>Blogs e Portais</h4>
-                    <p>Plataformas de conteúdo com CMS integrado</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-users"></i>
-                    <h4>Portais Corporativos</h4>
-                    <p>Intranets e sistemas de gestão interna</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-cogs"></i>
-                    <h4>Aplicações Web</h4>
-                    <p>Sistemas web personalizados e SaaS</p>
+                <div class="service-card reveal reveal-right" style="margin-top: 40px;">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Landing Pages Lite</h3>
+                    <p>Conversão máxima com design minimalista e código ultra-leve.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="process-section">
         <div class="container">
-            <h2>Pronto para Criar Seu Site?</h2>
-            <p>Entre em contato conosco e vamos transformar sua ideia em realidade digital.</p>
-            <a href="https://wa.me/5532988272527" target="_blank" class="btn btn-primary">
-                <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
-            </a>
+            <div class="section-header reveal">
+                <span class="section-label" style="color: var(--accent-color);">STACK TECNOLÓGICA</span>
+                <h2>PODER E ESCALABILIDADE</h2>
+            </div>
+            <div class="grid-stack reveal">
+                <div class="service-card stack-card reveal">
+                    <div class="card-visual"><i class="fab fa-react"></i></div>
+                    <h3>REACT / NEXT.JS</h3>
+                    <p>Frontends modernos e velozes com renderização híbrida e otimização máxima para SEO.</p>
+                </div>
+                <div class="service-card stack-card reveal">
+                    <div class="card-visual"><i class="fab fa-node-js"></i></div>
+                    <h3>NODE.JS</h3>
+                    <p>Backends escaláveis em tempo real com arquitetura robusta orientada a eventos.</p>
+                </div>
+                <div class="service-card stack-card reveal">
+                    <div class="card-visual"><i class="fab fa-laravel"></i></div>
+                    <h3>PHP / LARAVEL</h3>
+                    <p>Sistemas robustos e elegantes com o framework PHP mais consolidado e seguro do mercado.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <i class="fas fa-code"></i>
-                        <span>TechSolutions</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">TECHSOLUTIONS</div>
+                    <p>Técnologias Para o Futuro do Seu Négocio</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>SISTEMA</h4>
+                        <ul>
+                            <li><a href="index.html#home">INÍCIO</a></li>
+                            <li><a href="index.html#services">SERVIÇOS</a></li>
+                            <li><a href="sobre-nos.html">SOBRE NÓS</a></li>
+                        </ul>
                     </div>
-                    <p>Transformando ideias em soluções tecnológicas inovadoras desde 2020.</p>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="desenvolvimento-web.html">Criação de Sites</a></li>
-                        <li><a href="analise-dados.html">Análise de Dados</a></li>
-                        <li><a href="desenvolvimento-mobile.html">Criação de Aplicativos</a></li>
-                        <li><a href="machine-learning.html">Machine Learning</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
-                        <li><a href="index.html#portfolio">Portfólio</a></li>
-                        <li><a href="index.html#contact">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Contato</h4>
-                    <p>Telefone: (16) 99651-0930</p>
-                    <p>WhatsApp: (32) 98827-2527</p>
+                    <div class="footer-col">
+                        <h4>SOLUÇÕES</h4>
+                        <ul>
+                            <li><a href="desenvolvimento-web.html">DESENV. WEB</a></li>
+                            <li><a href="analise-dados.html">DADOS & IA</a></li>
+                            <li><a href="desenvolvimento-mobile.html">MOBILE / APPS</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2025 TechSolutions. Todos os direitos reservados.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
+                <p>&copy; 2026 TechSolutions. [SISTEMA_ESTAVEL]</p>
             </div>
         </div>
     </footer>
