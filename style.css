@@ -898,6 +898,11 @@ section {
     margin: 0 auto;
 }
 
+.contact-content.centered {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
 .contact-form-wrapper {
     background-color: var(--white);
     padding: 2.5rem;
@@ -979,6 +984,14 @@ section {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.contact-info-card.highlighted {
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    max-width: 500px;
+    width: 100%;
 }
 
 .contact-info-item {
@@ -1174,10 +1187,6 @@ section {
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-form {
-        grid-template-columns: 1fr;
     }
 
     .footer-content {
