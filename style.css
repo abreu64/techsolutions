@@ -383,7 +383,7 @@ nav {
 
 /* Seções Gerais */
 section {
-    padding: 80px 20px;
+    padding: 50px 20px;
     scroll-margin-top: 100px;
     /* Ensures fixed header doesn't cover section title */
 }
@@ -391,7 +391,7 @@ section {
 .section-header {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
 }
 
 .section-label {
@@ -478,7 +478,7 @@ section {
 
 /* Services Section (Asymmetric Tension) */
 .services-section {
-    padding: 120px 20px;
+    padding: 60px 20px;
     background-color: var(--white);
 }
 
@@ -501,7 +501,7 @@ section {
 }
 
 .service-card:nth-child(even):not(.stack-card) {
-    margin-top: 80px;
+    margin-top: 40px;
     /* Staggered effect - disabled for stack-card to ensure alignment */
 }
 
@@ -612,7 +612,7 @@ section {
 
 /* Process Section (Brutalist Timeline) */
 .process-section {
-    padding: 120px 20px;
+    padding: 60px 20px;
     background-color: var(--primary-color);
     color: var(--white);
 }
@@ -636,7 +636,7 @@ section {
 
 .process-step {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .process-number {
@@ -1010,7 +1010,7 @@ section {
 
 /* Footer (Radical Asymmetry) */
 .footer {
-    padding: 100px 20px 50px;
+    padding: 50px 20px 30px;
     background-color: var(--primary-color);
     color: var(--white);
 }
@@ -1018,11 +1018,11 @@ section {
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 80px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .footer-brand .logo {
