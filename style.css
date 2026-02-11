@@ -168,13 +168,12 @@ nav {
 /* Seção Hero */
 .hero {
     background: var(--gradient-primary);
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     /* Asymmetric Tension: Left Aligned */
-    padding: 80px 4rem 80px;
-    /* Reduced top padding to 80px */
+    padding: 30px 4rem 30px;
     position: relative;
     overflow: hidden;
 }
@@ -685,8 +684,8 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -707,7 +706,7 @@ section {
 .portfolio-image {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    height: 180px;
 }
 
 .portfolio-image img {
@@ -743,7 +742,7 @@ section {
 }
 
 .portfolio-content {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .portfolio-content h4 {
