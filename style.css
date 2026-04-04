@@ -1178,7 +1178,17 @@ section {
     }
 
     .process-timeline {
-        grid-template-columns: 1fr;
+        padding-left: 60px;
+    }
+    
+    .process-timeline::before {
+        left: 20px;
+    }
+    
+    .process-number {
+        left: -60px;
+        width: 50px;
+        font-size: 2rem;
     }
 
     .portfolio-grid {
@@ -1189,7 +1199,11 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer-content {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid, .footer-links {
         grid-template-columns: 1fr;
     }
 
