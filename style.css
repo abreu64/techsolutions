@@ -638,14 +638,53 @@ section {
     color: var(--text-color);
 }
 
-.service-features i {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
+.service-card .btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 6px 6px 0px var(--primary-color);
+    padding: 1.1rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: var(--transition);
+    margin: 1.5rem auto 0;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.service-card .btn-primary:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--primary-color);
+    background-color: var(--white);
+}
+
+.service-card .btn-primary i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
 }
 
 .service-card.featured-card {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(2rem, 8vw, 4rem);
+}
+
+.service-card.featured-card .service-icon {
+    position: static;
+    margin-bottom: 2rem;
+}
+
+.service-card.featured-card h3 {
+    margin-top: 0;
 }
 
 .demo-info {
