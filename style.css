@@ -511,7 +511,7 @@ section {
 
 /* Services Section (Asymmetric Tension) */
 .services-section {
-    padding: 30px 20px;
+    padding: 60px 20px 100px; /* Increased bottom padding for clearance */
     background-color: var(--white);
 }
 
@@ -641,11 +641,11 @@ section {
 .service-card .btn-primary {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    box-shadow: 6px 6px 0px var(--primary-color);
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 1.1rem 2.2rem;
     font-size: 1.1rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
@@ -658,9 +658,11 @@ section {
 }
 
 .service-card .btn-primary:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0px var(--primary-color);
     background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .service-card .btn-primary i {
@@ -670,12 +672,13 @@ section {
 
 .service-card.featured-card {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 5rem; /* Large bottom margin to prevent clipping */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: clamp(2rem, 8vw, 4rem);
+    height: auto; /* Ensure auto-height */
 }
 
 .service-card.featured-card .service-icon {
