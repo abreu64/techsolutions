@@ -1174,24 +1174,41 @@ section {
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
-        text-align: left;
-        padding-top: 120px;
-        padding-bottom: 60px;
+        text-align: center;
+        padding: 120px 20px 60px;
+        justify-content: center;
     }
 
     .hero-content {
         max-width: 100%;
         margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: clamp(2.2rem, 10vw, 3.5rem);
+        font-size: clamp(2rem, 10vw, 3rem);
         text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+        margin: 0 auto 2.5rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-image {
@@ -1249,11 +1266,11 @@ section {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Absolute fix for small screens */
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .section-header h2 {
