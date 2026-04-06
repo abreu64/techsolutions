@@ -201,8 +201,8 @@ nav {
     min-height: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* Asymmetric Tension: Left Aligned */
+    justify-content: center;
+    /* Centered for all devices */
     padding: 30px 4rem 30px;
     position: relative;
     overflow: hidden;
@@ -226,8 +226,11 @@ nav {
     /* Reduced for better line length */
     z-index: 10;
     position: relative;
-    text-align: left;
-    /* Explicit left alignment */
+    text-align: center;
+    /* Centered alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-label {
@@ -257,18 +260,20 @@ nav {
 .hero p {
     font-size: 1.25rem;
     max-width: 600px;
-    margin: 0 0 3rem 0;
-    /* Align left */
+    margin: 0 auto 3rem auto;
+    /* Centered with auto margins */
     opacity: 0.9;
     color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
-    justify-content: flex-start;
-    /* Align left */
+    justify-content: center;
+    /* Centered alignment */
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .hero-visual {
@@ -711,6 +716,9 @@ section {
     margin: 0 auto;
     position: relative;
     padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .process-timeline::before {
@@ -1175,7 +1183,8 @@ section {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 20px 60px; /* Symmetrical padding */
+        padding: 100px 20px 60px;
+        /* Symmetrical padding */
         justify-content: center;
         align-items: center;
     }
@@ -1194,10 +1203,12 @@ section {
         font-size: clamp(2rem, 10vw, 3rem);
         text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     .hero p {
         margin: 0 auto 2.5rem;
+        text-align: center;
     }
 
     .hero-buttons {
@@ -1206,16 +1217,21 @@ section {
         max-width: 320px;
         margin: 0 auto;
         gap: 15px;
-        align-items: center; /* Force centering children */
+        align-items: center;
+        /* Force centering children */
+        justify-content: center;
     }
 
     .hero-buttons .btn {
         width: 100%;
-        max-width: 280px; /* Reduced for tighter mobile feel */
+        max-width: 280px;
+        /* Reduced for tighter mobile feel */
         justify-content: center;
         margin: 0 auto;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important; /* Force symmetrical shadow */
-        transform: none !important; /* Prevent hover/active shifting on tap */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+        /* Force symmetrical shadow */
+        transform: none !important;
+        /* Prevent hover/active shifting on tap */
     }
 
     .hero-image {
@@ -1237,6 +1253,183 @@ section {
     .hamburger {
         display: flex;
     }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0, 26, 51, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        padding: 4rem 2rem;
+        z-index: 2000;
+        gap: 3rem;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-menu li a {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        /* Absolute fix for small screens */
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .service-card:nth-child(odd),
+    .service-card:nth-child(even) {
+        margin: 0 auto 2rem;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .service-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .process-timeline {
+        padding-left: 0;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .process-timeline::before {
+        display: none; /* Hide timeline line on mobile */
+    }
+    
+    .process-step {
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .process-number {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+    .process-step h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .process-step p {
+        margin: 0 auto;
+        max-width: 90%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-grid, .footer-links {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
 
     .nav-menu {
         position: fixed;
@@ -1319,6 +1512,8 @@ section {
         width: 100%;
         max-width: 500px;
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .process-number {
@@ -1332,16 +1527,23 @@ section {
         background-color: var(--accent-color);
         color: var(--primary-color);
         box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
     }
 
     .process-step h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
+        color: var(--white);
+        text-align: center;
     }
 
     .process-step p {
         margin: 0 auto;
         max-width: 90%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .portfolio-grid {
@@ -1380,6 +1582,24 @@ section {
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 1.5rem;
     }
 
     .section-header h2 {
@@ -1388,6 +1608,44 @@ section {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .process-timeline {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .process-step {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .process-number {
+        width: 70px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+
+    .process-step h3 {
+        font-size: 1.3rem;
+    }
+
+    .process-step p {
+        font-size: 0.95rem;
+    }
+
+    nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 40px;
+        width: 40px;
     }
 }
 
