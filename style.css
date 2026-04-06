@@ -344,8 +344,8 @@ nav {
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 1.2rem 2.5rem;
+    gap: 8px;
+    padding: 0.9rem 1.8rem;
     border: 2px solid var(--primary-color);
     border-radius: var(--radius);
     font-weight: 700;
@@ -356,6 +356,7 @@ nav {
     font-family: 'Outfit', sans-serif;
     position: relative;
     overflow: hidden;
+    font-size: 0.9rem;
 }
 
 .btn-primary {
@@ -1320,157 +1321,12 @@ section {
     }
 
     .hero-buttons .btn {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .service-card:nth-child(odd),
-    .service-card:nth-child(even) {
-        margin: 0 auto 2rem;
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .service-card {
-        padding: 2.5rem 1.5rem;
-    }
-
-    .process-timeline {
-        padding-left: 0;
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .process-timeline::before {
-        display: none; /* Hide timeline line on mobile */
-    }
-    
-    .process-step {
-        text-align: center;
-        padding: 2rem 1rem;
-        margin-bottom: 3rem;
-        width: 100%;
-        max-width: 500px;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .process-number {
-        position: relative;
-        left: 0;
-        top: 0;
-        margin: 0 auto 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--accent-color);
-        color: var(--primary-color);
-        box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-        width: 80px;
-        height: 80px;
-        border-radius: 8px;
-    }
-
-    .process-step h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--white);
-        text-align: center;
-    }
-
-    .process-step p {
-        margin: 0 auto;
+        width: auto;
         max-width: 90%;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.8);
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 1.5rem;
-    }
-
-    .footer-grid, .footer-links {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-}
-
-    .nav-menu {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        height: 100vh;
-        width: 80%;
-        max-width: 400px;
-        flex-direction: column;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
         justify-content: center;
-        background-color: rgba(0, 26, 51, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-        padding: 4rem 2rem;
-        z-index: 2000;
-        gap: 3rem;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-menu li {
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav-menu li a {
-        font-size: 1.5rem;
-        font-weight: 800;
-        text-transform: uppercase;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem; /* Absolute fix for small screens */
-    }
-
-    .hero p {
-        font-size: 0.95rem;
+        white-space: nowrap;
     }
 
     .section-header h2 {
@@ -1581,29 +1437,39 @@ section {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: center;
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
     }
 
     .hero-buttons {
         width: 100%;
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero-buttons .btn {
-        width: 100%;
+        width: auto;
         max-width: 100%;
-        padding: 1rem 1.5rem;
+        padding: 0.65rem 1.2rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5) !important;
     }
 
     .section-header h2 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
     }
 
     .stats-grid {
@@ -1618,21 +1484,21 @@ section {
     .process-step {
         width: 100%;
         max-width: 100%;
-        padding: 1.5rem;
+        padding: 1rem 0.5rem;
     }
 
     .process-number {
-        width: 70px;
-        height: 70px;
-        font-size: 1.2rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
     }
 
     .process-step h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .process-step p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     nav {
