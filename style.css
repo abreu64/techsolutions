@@ -1154,6 +1154,20 @@ section {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 .stat-item {
     text-align: center;
 }
@@ -1163,6 +1177,24 @@ section {
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-label {
+        font-size: 0.9rem;
+    }
 }
 
 .stat-label {
@@ -1268,11 +1300,15 @@ section {
 
 @media (max-width: 768px) {
     .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
@@ -1286,6 +1322,18 @@ section {
     transition: var(--transition);
     box-shadow: var(--shadow-md);
     color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 1.5rem 0.75rem;
+    }
 }
 
 .contact-card i {
