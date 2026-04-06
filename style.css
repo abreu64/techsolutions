@@ -102,6 +102,18 @@ nav {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.75rem 1rem;
+    }
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -218,6 +230,18 @@ nav {
     padding: 30px 2rem 30px;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 1.5rem 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 1rem 30px;
+    }
 }
 
 .hero-overlay {
@@ -469,13 +493,31 @@ section {
 
 .grid-stack {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .grid-stack {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-stack {
+        grid-template-columns: 1fr;
+        padding: 0 0.75rem;
+        gap: 1.5rem;
+    }
 }
 
 .grid-stack .service-card {
     margin-top: 0 !important;
     height: 100%;
+    max-width: 100%;
 }
 
 .stack-card {
@@ -487,6 +529,27 @@ section {
     justify-content: center;
     margin-top: 0 !important;
     /* Explicitly disable staggering */
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    .stack-card {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-card {
+        padding: 1.25rem !important;
+    }
+}
+
+.stack-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px var(--primary-color);
 }
 
 .stack-card .card-visual {
@@ -502,16 +565,39 @@ section {
     font-size: 1.5rem;
 }
 
+@media (max-width: 480px) {
+    .stack-card .card-visual {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
 .stack-card h3 {
     font-size: 1.2rem !important;
     margin-top: 0 !important;
     margin-bottom: 0.5rem !important;
+    color: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+    .stack-card h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.3rem !important;
+    }
 }
 
 .stack-card p {
     font-size: 0.9rem !important;
     margin-bottom: 0 !important;
     color: var(--text-light);
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .stack-card p {
+        font-size: 0.85rem !important;
+    }
 }
 
 .section-header h2 {
@@ -544,15 +630,27 @@ section {
     padding: 0 2rem;
 }
 
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
         padding: 0 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .services-grid {
-        padding: 0 0.5rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.75rem;
     }
 }
 
@@ -563,6 +661,18 @@ section {
     position: relative;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
 }
 
 .service-card:nth-child(even):not(.stack-card) {
@@ -704,13 +814,29 @@ section {
 
 .service-card.featured-card {
     max-width: 800px;
-    margin: 0 auto 5rem; /* Large bottom margin to prevent clipping */
+    margin: 0 auto 5rem;
+    /* Large bottom margin to prevent clipping */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: clamp(2rem, 8vw, 4rem);
-    height: auto; /* Ensure auto-height */
+    height: auto;
+    /* Ensure auto-height */
+}
+
+@media (max-width: 768px) {
+    .service-card.featured-card {
+        padding: 1.5rem;
+        margin: 0 auto 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card.featured-card {
+        padding: 1rem;
+        margin: 0 auto 2rem;
+    }
 }
 
 .service-card.featured-card .service-icon {
