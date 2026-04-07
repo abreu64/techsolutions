@@ -1656,6 +1656,29 @@ section {
         text-transform: uppercase;
     }
 
+    .nav-menu li a.btn-nav {
+        background-color: transparent !important;
+        color: var(--white) !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .nav-menu li a.btn-nav:hover {
+        background-color: transparent !important;
+        color: var(--accent-color) !important;
+        transform: none !important;
+    }
+
+    .nav-menu li a.btn-nav i {
+        margin-right: 0.5rem;
+    }
+
     .hero {
         padding: 60px 1.5rem;
         flex-direction: column;
